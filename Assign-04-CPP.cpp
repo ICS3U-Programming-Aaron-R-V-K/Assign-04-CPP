@@ -90,6 +90,8 @@ int main() {
 
                 std::cout << "\nGAME SUMMARY" << std::endl;
                 std::cout << "Total games played: " << totalGames << std::endl;
+                std::cout.precision(1);
+                std::cout << std::fixed;
                 std::cout << "Total rolls made: " << totalRolls << std::endl;
                 std::cout << "Chance of rolling doubles per roll: "
                 << chanceOfDoubles << "%" << std::endl;
