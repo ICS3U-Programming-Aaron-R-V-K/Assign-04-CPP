@@ -17,7 +17,7 @@ int main() {
     std::string userInput;
 
     // Get everything else as an integer
-    int die1, die2, rolls, totalRolls = 0, totalGames = 0;
+    float die1, die2, rolls, totalRolls = 0, totalGames = 0;
 
     // Declare this variable to false, to end the whole program
     bool terminateProgram = false;
@@ -38,7 +38,7 @@ int main() {
         // Inner loop for rolling dice until doubles are rolled
         while (true) {
             // Simulate shaking the dice 3 times with after 0.3 seconds
-            for (int i = 0; i < 3; i++) {
+            for (int shake = 0; shake < 3; shake++) {
                 std::cout << " Shaking the dice..." << std::endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(300));
             }
@@ -83,10 +83,9 @@ int main() {
                 std::cout << "\nThank you for playing!" << std::endl;
 
                 // Calculate and display stats
-                float chanceOfDoubles = static_cast<float> (totalGames)
-                / totalRolls * 100;
-                float avgRollsPerGame = static_cast<float> (totalRolls)
-                / totalGames;
+                float chanceOfDoubles = (totalGames
+                / totalRolls) * 100;
+                float avgRollsPerGame = (totalRolls/ totalGames);
 
                 std::cout << "\nGAME SUMMARY" << std::endl;
                 std::cout << "Total games played: " << totalGames << std::endl;
