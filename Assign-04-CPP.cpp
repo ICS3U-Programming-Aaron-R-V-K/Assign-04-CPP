@@ -16,7 +16,7 @@ int main() {
     // Get user input as a string
     std::string userInput;
 
-    // Get everything else as an integer
+    // Get everything else as an float
     float die1, die2, rolls, totalRolls = 0, totalGames = 0;
 
     // Declare this variable to false, to end the whole program
